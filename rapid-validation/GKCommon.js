@@ -1,63 +1,63 @@
 function killerrors() {
-        return true;
+  return true;
 }
 //window.onerror = killerrors;
 
 parent.document.title=document.title;
-// Òş²ØÏûÏ¢
+// éšè—æ¶ˆæ¯
 function hideFilterdata(){
-	document.getElementById("noFilterdata").style.display = "none";	
+  document.getElementById("noFilterdata").style.display = "none";
 }
-//ENTER¥­©`¤òÑºÏÂ•r¡¢TAB¥­©`¤Î„Ó¤­¤ò¸î¤êµ±¤Æ¤ë
+//ENTERã‚­ãƒ¼ã‚’æŠ¼ä¸‹æ™‚ã€TABã‚­ãƒ¼ã®å‹•ãã‚’å‰²ã‚Šå½“ã¦ã‚‹
 document.onkeydown = function(){
-	
-	//¥Ü¥¿¥ó¤È¥µ¥Ö¥ß¥Ã¥È¥Ü¥¿¥óÒÔÍâ¤Î¥¨¥ì¥á¥ó¥È¤òŒÏó¤È¤¹¤ë
-	//¥Æ¥­¥¹¥È¥¨¥ê¥¢¤ÎˆöºÏ¡¢ENTER¥­©`¤ò„IÀí¤·¤Ê¤¤
 
-	if(!(event.srcElement.type == "button" || event.srcElement.type == "submit" ||event.srcElement.type == "textarea")){
+  //ãƒœã‚¿ãƒ³ã¨ã‚µãƒ–ãƒŸãƒƒãƒˆãƒœã‚¿ãƒ³ä»¥å¤–ã®ã‚¨ãƒ¬ãƒ¡ãƒ³ãƒˆã‚’å¯¾è±¡ã¨ã™ã‚‹
+  //ãƒ†ã‚­ã‚¹ãƒˆã‚¨ãƒªã‚¢ã®å ´åˆã€ENTERã‚­ãƒ¼ã‚’å‡¦ç†ã—ãªã„
 
-	if(!(event.srcElement.type == "button" || event.srcElement.type == "submit"||event.srcElement.type == "textarea" )) {
+  if(!(event.srcElement.type == "button" || event.srcElement.type == "submit" ||event.srcElement.type == "textarea")){
 
-		//13:enter,9:tab
-		if (event.keyCode == 13) {
-			event.keyCode = 13;
-		}
-	}	
-	}
+    if(!(event.srcElement.type == "button" || event.srcElement.type == "submit"||event.srcElement.type == "textarea" )) {
+
+      //13:enter,9:tab
+      if (event.keyCode == 13) {
+        event.keyCode = 13;
+      }
+    }
+  }
 
 }
 window.status = '';
 var cal;
-var isFocus=false; //ÊÇ·ñÎª½¹µã
-//×Ô¼Ó
+var isFocus=false; //æ˜¯å¦ä¸ºç„¦ç‚¹
+//è‡ªåŠ 
 var objdate
 
 var objdate1
 
-//Ñ¡ÔñÈÕÆÚ
+//é€‰æ‹©æ—¥æœŸ
 function SelectDate(obj,strFormat)
 {
-	//×Ô¼Ó
-	objdate = obj;
-	
-    var date = new Date();
-    var by = date.getFullYear()-50;  //×îĞ¡Öµ ¡ú 50 ÄêÇ°
-    var ey = date.getFullYear()+50;  //×î´óÖµ ¡ú 50 Äêºó
-    cal = (cal==null) ? new Calendar(by, ey, 0) : cal;    //³õÊ¼»¯Ó¢ÎÄ°æ£¬0 ÎªÖĞÎÄ°æ
-    cal.dateFormatStyle = strFormat;
-    cal.show(obj);
+  //è‡ªåŠ 
+  objdate = obj;
+
+  var date = new Date();
+  var by = date.getFullYear()-50;  //æœ€å°å€¼ â†’ 50 å¹´å‰
+  var ey = date.getFullYear()+50;  //æœ€å¤§å€¼ â†’ 50 å¹´å
+  cal = (cal==null) ? new Calendar(by, ey, 0) : cal;    //åˆå§‹åŒ–è‹±æ–‡ç‰ˆï¼Œ0 ä¸ºä¸­æ–‡ç‰ˆ
+  cal.dateFormatStyle = strFormat;
+  cal.show(obj);
 }
 /**//**//**//**
- * ·µ»ØÈÕÆÚ
+ * è¿”å›æ—¥æœŸ
  * @param d the delimiter
  * @param p the pattern of your date
- * ¸ù¾İÓÃ»§Ö¸¶¨µÄ style À´È·¶¨£»
+ * æ ¹æ®ç”¨æˆ·æŒ‡å®šçš„ style æ¥ç¡®å®šï¼›
  */
 //String.prototype.toDate = function(x, p) {
 String.prototype.toDate = function(style) {
-  var y = this.substring(style.indexOf('y'),style.lastIndexOf('y')+1);//Äê
-  var m = this.substring(style.indexOf('M'),style.lastIndexOf('M')+1);//ÔÂ
-  var d = this.substring(style.indexOf('d'),style.lastIndexOf('d')+1);//ÈÕ
+  var y = this.substring(style.indexOf('y'),style.lastIndexOf('y')+1);//å¹´
+  var m = this.substring(style.indexOf('M'),style.lastIndexOf('M')+1);//æœˆ
+  var d = this.substring(style.indexOf('d'),style.lastIndexOf('d')+1);//æ—¥
   if(isNaN(y)) y = new Date().getFullYear();
   if(isNaN(m)) m = new Date().getMonth();
   if(isNaN(d)) d = new Date().getDate();
@@ -67,7 +67,7 @@ String.prototype.toDate = function(style) {
 }
 
 /**//**//**//**
- * ¸ñÊ½»¯ÈÕÆÚ
+ * æ ¼å¼åŒ–æ—¥æœŸ
  * @param   d the delimiter
  * @param   p the pattern of your date
  * @author  meizz
@@ -79,29 +79,29 @@ Date.prototype.format = function(style) {
     "h+" : this.getHours(),     //hour
     "m+" : this.getMinutes(),   //minute
     "s+" : this.getSeconds(),   //second
-    "w+" : "ÌìÒ»¶şÈıËÄÎåÁù".charAt(this.getDay()),   //week
+    "w+" : "å¤©ä¸€äºŒä¸‰å››äº”å…­".charAt(this.getDay()),   //week
     "q+" : Math.floor((this.getMonth() + 3) / 3),  //quarter
     "S"  : this.getMilliseconds() //millisecond
   }
   if(/(y+)/.test(style)) {
     style = style.replace(RegExp.$1,
-    (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+        (this.getFullYear() + "").substr(4 - RegExp.$1.length));
   }
   for(var k in o){
     if(new RegExp("("+ k +")").test(style)){
       style = style.replace(RegExp.$1,
-        RegExp.$1.length == 1 ? o[k] :
-        ("00" + o[k]).substr(("" + o[k]).length));
+          RegExp.$1.length == 1 ? o[k] :
+              ("00" + o[k]).substr(("" + o[k]).length));
     }
   }
   return style;
 };
 
 /**//**//**//**
- * ÈÕÀúÀà
+ * æ—¥å†ç±»
  * @param   beginYear 1990
  * @param   endYear   2010
- * @param   lang      0(ÖĞÎÄ)|1(Ó¢Óï) ¿É×ÔÓÉÀ©³ä
+ * @param   lang      0(ä¸­æ–‡)|1(è‹±è¯­) å¯è‡ªç”±æ‰©å……
  * @param   dateFormatStyle  "yyyy-MM-dd";
  * @version 2006-04-01
  * @author  KimSoft (jinqinghua [at] gmail.com)
@@ -110,8 +110,8 @@ Date.prototype.format = function(style) {
 function Calendar(beginYear, endYear, lang, dateFormatStyle) {
   this.beginYear = 1990;
   this.endYear = 2010;
-  this.lang = 0;            //0(ÖĞÎÄ) | 1(Ó¢ÎÄ)
-  this.dateFormatStyle = "yyyy-MM-dd hh£ºmm£ºss";
+  this.lang = 0;            //0(ä¸­æ–‡) | 1(è‹±æ–‡)
+  this.dateFormatStyle = "yyyy-MM-dd hhï¼šmmï¼šss";
 
   if (beginYear != null && endYear != null){
     this.beginYear = beginYear;
@@ -136,19 +136,19 @@ function Calendar(beginYear, endYear, lang, dateFormatStyle) {
 
 
   this.colors = {
-  "cur_word"      : "red",  //µ±ÈÕÈÕÆÚÎÄ×ÖÑÕÉ«
-  "cur_bg"        : "#FFFFFF",  //µ±ÈÕÈÕÆÚµ¥Ôª¸ñ±³Ó°É«
-  "sel_bg"        : "#FFCCCC",  //ÒÑ±»Ñ¡ÔñµÄÈÕÆÚµ¥Ôª¸ñ±³Ó°É« 2006-12-03 º®Óğ·ãÌí¼Ó
-  "sun_word"      : "#FF0000",  //ĞÇÆÚÌìÎÄ×ÖÑÕÉ«
-  "sat_word"      : "#0000FF",  //ĞÇÆÚÁùÎÄ×ÖÑÕÉ«
-  "td_word_light" : "#333333",  //µ¥Ôª¸ñÎÄ×ÖÑÕÉ«
-  "td_word_dark"  : "#CCCCCC",  //µ¥Ôª¸ñÎÄ×Ö°µÉ«
-  "td_bg_out"     : "#EFEFEF",  //µ¥Ôª¸ñ±³Ó°É«
-  "td_bg_over"    : "#FFCC00",  //µ¥Ôª¸ñ±³Ó°É«
-  "tr_word"       : "#FFFFFF",  //ÈÕÀúÍ·ÎÄ×ÖÑÕÉ«
-  "tr_bg"         : "#666666",  //ÈÕÀúÍ·±³Ó°É«
-  "input_border"  : "#CCCCCC",  //input¿Ø¼şµÄ±ß¿òÑÕÉ«
-  "input_bg"      : "#EFEFEF"   //input¿Ø¼şµÄ±³Ó°É«
+    "cur_word"      : "red",  //å½“æ—¥æ—¥æœŸæ–‡å­—é¢œè‰²
+    "cur_bg"        : "#FFFFFF",  //å½“æ—¥æ—¥æœŸå•å…ƒæ ¼èƒŒå½±è‰²
+    "sel_bg"        : "#FFCCCC",  //å·²è¢«é€‰æ‹©çš„æ—¥æœŸå•å…ƒæ ¼èƒŒå½±è‰² 2006-12-03 å¯’ç¾½æ«æ·»åŠ 
+    "sun_word"      : "#FF0000",  //æ˜ŸæœŸå¤©æ–‡å­—é¢œè‰²
+    "sat_word"      : "#0000FF",  //æ˜ŸæœŸå…­æ–‡å­—é¢œè‰²
+    "td_word_light" : "#333333",  //å•å…ƒæ ¼æ–‡å­—é¢œè‰²
+    "td_word_dark"  : "#CCCCCC",  //å•å…ƒæ ¼æ–‡å­—æš—è‰²
+    "td_bg_out"     : "#EFEFEF",  //å•å…ƒæ ¼èƒŒå½±è‰²
+    "td_bg_over"    : "#FFCC00",  //å•å…ƒæ ¼èƒŒå½±è‰²
+    "tr_word"       : "#FFFFFF",  //æ—¥å†å¤´æ–‡å­—é¢œè‰²
+    "tr_bg"         : "#666666",  //æ—¥å†å¤´èƒŒå½±è‰²
+    "input_border"  : "#CCCCCC",  //inputæ§ä»¶çš„è¾¹æ¡†é¢œè‰²
+    "input_bg"      : "#EFEFEF"   //inputæ§ä»¶çš„èƒŒå½±è‰²
   }
 
   this.draw();
@@ -159,25 +159,25 @@ function Calendar(beginYear, endYear, lang, dateFormatStyle) {
 }
 
 /**//**//**//**
- * ÈÕÀúÀàÊôĞÔ£¨ÓïÑÔ°ü£¬¿É×ÔÓÉÀ©Õ¹£©
+ * æ—¥å†ç±»å±æ€§ï¼ˆè¯­è¨€åŒ…ï¼Œå¯è‡ªç”±æ‰©å±•ï¼‰
  */
 Calendar.language = {
   "year"   : [[""], [""]],
-  "months" : [["Ò»ÔÂ","¶şÔÂ","ÈıÔÂ","ËÄÔÂ","ÎåÔÂ","ÁùÔÂ","ÆßÔÂ","°ËÔÂ","¾ÅÔÂ","Ê®ÔÂ","Ê®Ò»ÔÂ","Ê®¶şÔÂ"],
-        ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"]
-         ],
-  "weeks"  : [["ÈÕ","Ò»","¶ş","Èı","ËÄ","Îå","Áù"],
-        ["SUN","MON","TUR","WED","THU","FRI","SAT"]
-         ],
-  "clear"  : [["Çå¿Õ"], ["CLS"]],
-  "today"  : [["½ñÌì"], ["TODAY"]],
-  "close"  : [["¹Ø±Õ"], ["CLOSE"]]
+  "months" : [["ä¸€æœˆ","äºŒæœˆ","ä¸‰æœˆ","å››æœˆ","äº”æœˆ","å…­æœˆ","ä¸ƒæœˆ","å…«æœˆ","ä¹æœˆ","åæœˆ","åä¸€æœˆ","åäºŒæœˆ"],
+    ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"]
+  ],
+  "weeks"  : [["æ—¥","ä¸€","äºŒ","ä¸‰","å››","äº”","å…­"],
+    ["SUN","MON","TUR","WED","THU","FRI","SAT"]
+  ],
+  "clear"  : [["æ¸…ç©º"], ["CLS"]],
+  "today"  : [["ä»Šå¤©"], ["TODAY"]],
+  "close"  : [["å…³é—­"], ["CLOSE"]]
 }
 
 Calendar.prototype.draw = function() {
   calendar = this;
 
-  var mvAry = [];  
+  var mvAry = [];
   mvAry[mvAry.length]  = '  <div name="calendarForm" style="margin: 0px;">';
   mvAry[mvAry.length]  = '    <table width="100%" border="0" cellpadding="0" cellspacing="1">';
   mvAry[mvAry.length]  = '      <tr>';
@@ -210,43 +210,43 @@ Calendar.prototype.draw = function() {
   mvAry[mvAry.length]  = '        <th colspan="3"><input name="calendarToday" type="button" id="calendarToday" value="' + Calendar.language["today"][this.lang] + '" style="border: 1px solid ' + calendar.colors["input_border"] + ';background-color:' + calendar.colors["input_bg"] + ';width:100%;height:18px;font-size:9pt;"/></th>';
   mvAry[mvAry.length]  = '        <th colspan="2"><input name="calendarClose" type="button" id="calendarClose" value="' + Calendar.language["close"][this.lang] + '" style="border: 1px solid ' + calendar.colors["input_border"] + ';background-color:' + calendar.colors["input_bg"] + ';width:100%;height:18px;font-size:9pt;"/></th>';
   mvAry[mvAry.length]  = '      </tr>';
-  mvAry[mvAry.length]  = '    </table>';  
+  mvAry[mvAry.length]  = '    </table>';
   mvAry[mvAry.length]  = '  </div>';
   this.panel.innerHTML = mvAry.join("");
-  
-  /**//******** ÒÔÏÂ´úÂëÓÉº®Óğ·ã 2006-12-01 Ìí¼Ó **********/
+
+  /**//******** ä»¥ä¸‹ä»£ç ç”±å¯’ç¾½æ« 2006-12-01 æ·»åŠ  **********/
   var obj = this.getElementById("prevMonth");
   obj.onclick = function () {calendar.goPrevMonth(calendar);}
   obj.onblur = function () {calendar.onblur();}
   this.prevMonth= obj;
-  
+
   obj = this.getElementById("nextMonth");
   obj.onclick = function () {calendar.goNextMonth(calendar);}
   obj.onblur = function () {calendar.onblur();}
   this.nextMonth= obj;
-  
-  
+
+
 
   obj = this.getElementById("calendarClear");
   obj.onclick = function () {calendar.dateControl.value = "";calendar.hide();}
   this.calendarClear = obj;
-  
+
   obj = this.getElementById("calendarClose");
   obj.onclick = function () {calendar.hide();}
   this.calendarClose = obj;
-  
+
   obj = this.getElementById("calendarYear");
   obj.onchange = function () {calendar.update(calendar);}
   obj.onblur = function () {calendar.onblur();}
   this.calendarYear = obj;
-  
+
   obj = this.getElementById("calendarMonth");
   with(obj)
   {
     onchange = function () {calendar.update(calendar);}
     onblur = function () {calendar.onblur();}
   }this.calendarMonth = obj;
- 
+
   obj = this.getElementById("calendarToday");
   obj.onclick = function () {
     var today = new Date();
@@ -258,11 +258,11 @@ Calendar.prototype.draw = function() {
     calendar.dateControl.value = today.format(calendar.dateFormatStyle);
     calendar.hide();
   }
-  this.calendarToday = obj; 
+  this.calendarToday = obj;
 }
 
-//Äê·İÏÂÀ­¿ò°ó¶¨Êı¾İ
-Calendar.prototype.bindYear = function() { 
+//å¹´ä»½ä¸‹æ‹‰æ¡†ç»‘å®šæ•°æ®
+Calendar.prototype.bindYear = function() {
   var cy = this.calendarYear;
   cy.length = 0;
   for (var i = this.beginYear; i <= this.endYear; i++){
@@ -270,8 +270,8 @@ Calendar.prototype.bindYear = function() {
   }
 }
 
-//ÔÂ·İÏÂÀ­¿ò°ó¶¨Êı¾İ
-Calendar.prototype.bindMonth = function() { 
+//æœˆä»½ä¸‹æ‹‰æ¡†ç»‘å®šæ•°æ®
+Calendar.prototype.bindMonth = function() {
   var cm = this.calendarMonth;
   cm.length = 0;
   for (var i = 0; i < 12; i++){
@@ -279,7 +279,7 @@ Calendar.prototype.bindMonth = function() {
   }
 }
 
-//ÏòÇ°Ò»ÔÂ
+//å‘å‰ä¸€æœˆ
 Calendar.prototype.goPrevMonth = function(e){
   if (this.year == this.beginYear && this.month == 0){return;}
   this.month--;
@@ -292,7 +292,7 @@ Calendar.prototype.goPrevMonth = function(e){
   this.bindData();
 }
 
-//ÏòºóÒ»ÔÂ
+//å‘åä¸€æœˆ
 Calendar.prototype.goNextMonth = function(e){
   if (this.year == this.endYear && this.month == 11){return;}
   this.month++;
@@ -305,8 +305,8 @@ Calendar.prototype.goNextMonth = function(e){
   this.bindData();
 }
 
-//¸Ä±äSELECTÑ¡ÖĞ×´Ì¬
-Calendar.prototype.changeSelect = function() { 
+//æ”¹å˜SELECTé€‰ä¸­çŠ¶æ€
+Calendar.prototype.changeSelect = function() {
   var cy = this.calendarYear;
   var cm = this.calendarMonth;
   for (var i= 0; i < cy.length; i++){
@@ -323,8 +323,8 @@ Calendar.prototype.changeSelect = function() {
   }
 }
 
-//¸üĞÂÄê¡¢ÔÂ
-Calendar.prototype.update = function (e){ 
+//æ›´æ–°å¹´ã€æœˆ
+Calendar.prototype.update = function (e){
   this.year  = e.calendarYear.options[e.calendarYear.selectedIndex].value;
   this.month = e.calendarMonth.options[e.calendarMonth.selectedIndex].value;
   this.date = new Date(this.year, this.month, 1);
@@ -332,14 +332,14 @@ Calendar.prototype.update = function (e){
   this.bindData();
 }
 
-//°ó¶¨Êı¾İµ½ÔÂÊÓÍ¼
+//ç»‘å®šæ•°æ®åˆ°æœˆè§†å›¾
 Calendar.prototype.bindData = function () {
   var calendar = this;
   var dateArray = this.getMonthViewArray(this.date.getFullYear(), this.date.getMonth());
   var tds = this.getElementById("calendarTable").getElementsByTagName("td");
   for(var i = 0; i < tds.length; i++) {
-  //tds[i].style.color = calendar.colors["td_word_light"];
-  tds[i].style.backgroundColor = calendar.colors["td_bg_out"];
+    //tds[i].style.color = calendar.colors["td_word_light"];
+    tds[i].style.backgroundColor = calendar.colors["td_bg_out"];
     tds[i].onclick = function () {return;}
     tds[i].onmouseover = function () {return;}
     tds[i].onmouseout = function () {return;}
@@ -349,8 +349,8 @@ Calendar.prototype.bindData = function () {
       tds[i].onclick = function () {
         if (calendar.dateControl != null){
           calendar.dateControl.value = new Date(calendar.date.getFullYear(),
-                                                calendar.date.getMonth(),
-                                                this.innerHTML).format(calendar.dateFormatStyle);
+              calendar.date.getMonth(),
+              this.innerHTML).format(calendar.dateFormatStyle);
         }
         calendar.hide();
       }
@@ -362,8 +362,8 @@ Calendar.prototype.bindData = function () {
       }
       if (new Date().format(calendar.dateFormatStyle) ==
           new Date(calendar.date.getFullYear(),
-                   calendar.date.getMonth(),
-                   dateArray[i]).format(calendar.dateFormatStyle)) {
+              calendar.date.getMonth(),
+              dateArray[i]).format(calendar.dateFormatStyle)) {
         //tds[i].style.color = calendar.colors["cur_word"];
         tds[i].style.backgroundColor = calendar.colors["cur_bg"];
         tds[i].onmouseover = function () {
@@ -372,12 +372,12 @@ Calendar.prototype.bindData = function () {
         tds[i].onmouseout = function () {
           this.style.backgroundColor = calendar.colors["cur_bg"];
         }
-        //continue; //Èô²»Ïëµ±Ììµ¥Ôª¸ñµÄ±³¾°±»ÏÂÃæµÄ¸²¸Ç£¬ÇëÈ¡Ïû×¢ÊÍ
-      }   
-      
+        //continue; //è‹¥ä¸æƒ³å½“å¤©å•å…ƒæ ¼çš„èƒŒæ™¯è¢«ä¸‹é¢çš„è¦†ç›–ï¼Œè¯·å–æ¶ˆæ³¨é‡Š
+      }
+
       if (calendar.dateControl != null && calendar.dateControl.value == new Date(calendar.date.getFullYear(),
-                   calendar.date.getMonth(),
-                   dateArray[i]).format(calendar.dateFormatStyle)) {
+              calendar.date.getMonth(),
+              dateArray[i]).format(calendar.dateFormatStyle)) {
         tds[i].style.backgroundColor = calendar.colors["sel_bg"];
         tds[i].onmouseover = function () {
           this.style.backgroundColor = calendar.colors["td_bg_over"];
@@ -390,7 +390,7 @@ Calendar.prototype.bindData = function () {
   }
 }
 
-//¸ù¾İÄê¡¢ÔÂµÃµ½ÔÂÊÓÍ¼Êı¾İ(Êı×éĞÎÊ½)
+//æ ¹æ®å¹´ã€æœˆå¾—åˆ°æœˆè§†å›¾æ•°æ®(æ•°ç»„å½¢å¼)
 Calendar.prototype.getMonthViewArray = function (y, m) {
   var mvArray = [];
   var dayOfFirstDay = new Date(y, m, 1).getDay();
@@ -403,17 +403,17 @@ Calendar.prototype.getMonthViewArray = function (y, m) {
   }
   return mvArray;
   /*
-	var dateArray = new Array(42);
-	var dayOfFirstDate = new Date(y, m, 1).getDay();
-	var dateCountOfMonth = new Date(y, m + 1, 0).getDate();
-	for (var i = 0; i < dateCountOfMonth; i++) {
-		dateArray[i + dayOfFirstDate] = i + 1;
-	}
-	return dateArray;
-  */
+   var dateArray = new Array(42);
+   var dayOfFirstDate = new Date(y, m, 1).getDay();
+   var dateCountOfMonth = new Date(y, m + 1, 0).getDate();
+   for (var i = 0; i < dateCountOfMonth; i++) {
+   dateArray[i + dayOfFirstDate] = i + 1;
+   }
+   return dateArray;
+   */
 }
 
-//À©Õ¹ document.getElementById(id) ¶àä¯ÀÀÆ÷¼æÈİĞÔ from meizz tree source
+//æ‰©å±• document.getElementById(id) å¤šæµè§ˆå™¨å…¼å®¹æ€§ from meizz tree source
 Calendar.prototype.getElementById = function(id){
   if (typeof(id) != "string" || id == "") return null;
   if (document.getElementById) return document.getElementById(id);
@@ -421,13 +421,13 @@ Calendar.prototype.getElementById = function(id){
   try {return eval(id);} catch(e){ return null;}
 }
 
-//À©Õ¹ object.getElementsByTagName(tagName)
+//æ‰©å±• object.getElementsByTagName(tagName)
 Calendar.prototype.getElementsByTagName = function(object, tagName){
   if (document.getElementsByTagName) return document.getElementsByTagName(tagName);
   if (document.all) return document.all.tags(tagName);
 }
 
-//È¡µÃHTML¿Ø¼ş¾ø¶ÔÎ»ÖÃ
+//å–å¾—HTMLæ§ä»¶ç»å¯¹ä½ç½®
 Calendar.prototype.getAbsPoint = function (e){
   var x = e.offsetLeft;
   var y = e.offsetTop;
@@ -438,488 +438,488 @@ Calendar.prototype.getAbsPoint = function (e){
   return {"x": x, "y": y};
 }
 
-//ÏÔÊ¾ÈÕÀú
+//æ˜¾ç¤ºæ—¥å†
 Calendar.prototype.show = function (dateObj, popControl) {
   if (dateObj == null){
     throw new Error("arguments[0] is necessary")
   }
   this.dateControl = dateObj;
-  
+
   this.date = (dateObj.value.length > 0) ? new Date(dateObj.value.toDate(this.dateFormatStyle)) : new Date();
   this.year = this.date.getFullYear();
   this.month = this.date.getMonth();
   this.changeSelect();
   this.bindData();
-  
+
   if (popControl == null){
     popControl = dateObj;
   }
   var xy = this.getAbsPoint(popControl);
   this.panel.style.left = xy.x  + "px";
-  this.panel.style.top = (xy.y + dateObj.offsetHeight) + "px"; 
- 
+  this.panel.style.top = (xy.y + dateObj.offsetHeight) + "px";
+
   this.panel.style.display = "";
   this.container.style.display = "";
-  
+
   dateObj.onblur = function(){calendar.onblur();}
   this.container.onmouseover = function(){isFocus=true;}
   this.container.onmouseout = function(){isFocus=false;}
 }
-//Òş²ØÈÕÀú
+//éšè—æ—¥å†
 Calendar.prototype.hide = function() {
   this.panel.style.display = "none";
   this.container.style.display = "none";
   isFocus=false;
-  
+
   //***2007-01-25*******
- //*-×Ô¶¨ÒåÑé¿Ø¼şÊÇ·ñÎª¿Õ--*/
+  //*-è‡ªå®šä¹‰éªŒæ§ä»¶æ˜¯å¦ä¸ºç©º--*/
 //  try
 // {
-	 CheckDate(objdate);
+  CheckDate(objdate);
 //  }
 //  catch(err)
 //  {
 //  }
 }
-function CheckDate(obj)	//ÈÕÆÚ
+function CheckDate(obj)	//æ—¥æœŸ
 {
-	//var t = document.getElementById('txtPeriod').value;
-	var t = obj.value;
-	var v = null;
-	var tt = /^(\d{1,4})(-|\/)(\d{1,2})\2(\d{1,2})$/;
-	var dv = obj.id;
-		dv="dv_"+dv;
-	var dvDate =document.getElementById(dv);
-	
-	if (dvDate == null)
-	{
-		return;
-	}
-	if(t!="")
-	{
-		if(t.search(tt)!=-1)
-		{
-			
-			dvDate.style.display = 'none';
-			v = 0;	
-		}
-		else
-		{
-			dvDate.style.display = 'block';
-			v = 1;
-		}
-		if(DateCompare(obj.value,datenow)==true)
-		{
-			v = 0;
-		}
-		else
-		{
-			dvDate.style.display = 'block';
-			dvDate.innerHTML = "  <font color=red>&nbsp;&nbsp;ÄúµÄ½ØÖ¹ÈÕÆÚ±ØĞë´óÓÚ½ñÌì</font>";
-			v = 1
-		}
-		
-	}
-	else
-	{
-		dvDate.style.display = 'block';
-		v = 1;
-	}
-	return v;
+  //var t = document.getElementById('txtPeriod').value;
+  var t = obj.value;
+  var v = null;
+  var tt = /^(\d{1,4})(-|\/)(\d{1,2})\2(\d{1,2})$/;
+  var dv = obj.id;
+  dv="dv_"+dv;
+  var dvDate =document.getElementById(dv);
+
+  if (dvDate == null)
+  {
+    return;
+  }
+  if(t!="")
+  {
+    if(t.search(tt)!=-1)
+    {
+
+      dvDate.style.display = 'none';
+      v = 0;
+    }
+    else
+    {
+      dvDate.style.display = 'block';
+      v = 1;
+    }
+    if(DateCompare(obj.value,datenow)==true)
+    {
+      v = 0;
+    }
+    else
+    {
+      dvDate.style.display = 'block';
+      dvDate.innerHTML = "  <font color=red>&nbsp;&nbsp;æ‚¨çš„æˆªæ­¢æ—¥æœŸå¿…é¡»å¤§äºä»Šå¤©</font>";
+      v = 1
+    }
+
+  }
+  else
+  {
+    dvDate.style.display = 'block';
+    v = 1;
+  }
+  return v;
 }
 
-//½¹µã×ªÒÆÊ±Òş²ØÈÕÀú
+//ç„¦ç‚¹è½¬ç§»æ—¶éšè—æ—¥å†
 Calendar.prototype.onblur = function() {
-    if(!isFocus){this.hide();}
+  if(!isFocus){this.hide();}
 }
 document.write('<div id="ContainerPanel" style="display:none"><div id="calendarPanel" style="_top:expression(eval(document.documentElement.scrollTop)+38);position:absolute;_position:absolute;display: none;z-index: 9999;');
 document.write('background-color: #FFFFFF;border: 1px solid #CCCCCC;width:175px;font-size:9px;"></div>');
 if(document.all)
 {
-document.write('<iframe style="position:absolute;z-index:2000;width:expression(this.previousSibling.offsetWidth);');
-document.write('height:expression(this.previousSibling.offsetHeight);');
-document.write('left:expression(this.previousSibling.offsetLeft);top:expression(this.previousSibling.offsetTop);');
-document.write('display:expression(this.previousSibling.style.display);" scrolling="no" frameborder="no"></iframe>');
+  document.write('<iframe style="position:absolute;z-index:2000;width:expression(this.previousSibling.offsetWidth);');
+  document.write('height:expression(this.previousSibling.offsetHeight);');
+  document.write('left:expression(this.previousSibling.offsetLeft);top:expression(this.previousSibling.offsetTop);');
+  document.write('display:expression(this.previousSibling.style.display);" scrolling="no" frameborder="no"></iframe>');
 }
 document.write('</div>');
 
-	
-	function  GetOuterHTML(element)
-    {
-    return  document.createElement("DIV").appendChild(element.cloneNode(true)).parentNode.innerHTML;
-    }
+
+function  GetOuterHTML(element)
+{
+  return  document.createElement("DIV").appendChild(element.cloneNode(true)).parentNode.innerHTML;
+}
 /**
- * ¹²Í¨JS´¦Àí
- * ×÷³ÉÕß£ºº¼Öİ³ÉÂ¥ÍøÂç¿Æ¼¼ÓĞÏŞ¹«Ë¾
- * ×÷³ÉÈÕ£º2009/08/17
- * °æ±¾ºÅ1.0.0 ³õ´Î×÷³É
+ * å…±é€šJSå¤„ç†
+ * ä½œæˆè€…ï¼šæ­å·æˆæ¥¼ç½‘ç»œç§‘æŠ€æœ‰é™å…¬å¸
+ * ä½œæˆæ—¥ï¼š2009/08/17
+ * ç‰ˆæœ¬å·1.0.0 åˆæ¬¡ä½œæˆ
  */
 
 function addNode(actionNm,key,value){
 
-	if(actionNm.substring(actionNm.length -1,actionNm.length) != "?"){
-		actionNm = actionNm + "&";
-	}
-	actionNm = actionNm + key + "=";
-	actionNm = actionNm + value;
+  if(actionNm.substring(actionNm.length -1,actionNm.length) != "?"){
+    actionNm = actionNm + "&";
+  }
+  actionNm = actionNm + key + "=";
+  actionNm = actionNm + value;
 
-	return actionNm;
+  return actionNm;
 }
 
 /**
- * ×·¼Ó£¿ºÅ´¦Àí
+ * è¿½åŠ ï¼Ÿå·å¤„ç†
  */
 function addQuestion(str){
- 
- 	if(hasQuestion(str)){
-		return str;
-	}
-	return str + "?";
+
+  if(hasQuestion(str)){
+    return str;
+  }
+  return str + "?";
 }
 
 /**
- * ÅĞ¶ÏÓĞÃ»ÓĞ£¿ºÅ
+ * åˆ¤æ–­æœ‰æ²¡æœ‰ï¼Ÿå·
  */
 function hasQuestion(str){
- 
- 	if(str.search(/\?/) == -1){
-		return false;
-	}
-	return true;
+
+  if(str.search(/\?/) == -1){
+    return false;
+  }
+  return true;
 }
 
 /**
- * ¹²Í¨ÖØÖÃ´¦Àí
+ * å…±é€šé‡ç½®å¤„ç†
  */
 function commonReset(){
-	objForm = document.forms[0];
-	objForm.reset();
+  objForm = document.forms[0];
+  objForm.reset();
 }
 /**
- * ™CÄÜÕhÃ÷£º¹²Í¨‘ø¤ë„IÀí
- * ÒıÊı    £º¥¢¥¯¥·¥ç¥óÃû
- * ‘ø¤ê‚¡¡£º¤Ê¤·
- * ‚ä¿¼    £º¤Ê¤·
+ * æ©Ÿèƒ½èª¬æ˜ï¼šå…±é€šæˆ»ã‚‹å‡¦ç†
+ * å¼•æ•°    ï¼šã‚¢ã‚¯ã‚·ãƒ§ãƒ³å
+ * æˆ»ã‚Šå€¤ã€€ï¼šãªã—
+ * å‚™è€ƒ    ï¼šãªã—
  */
 function commonBack(actionNm){
-	objForm = document.forms[0];
-	//¥¢¥¯¥·¥ç¥óURL¤ÎÔO¶¨
-	objForm.action = actionNm;
-	objForm.method = "post";
-	//¥µ¥Ö¥ß¥Ã¥È¤¹¤ë
-	objForm.submit();
+  objForm = document.forms[0];
+  //ã‚¢ã‚¯ã‚·ãƒ§ãƒ³URLã®è¨­å®š
+  objForm.action = actionNm;
+  objForm.method = "post";
+  //ã‚µãƒ–ãƒŸãƒƒãƒˆã™ã‚‹
+  objForm.submit();
 }
 function isNull(str){
 
-	if(str == null || str == "" || str == " "){
-		return true;
-	}
-	
-	return false;
+  if(str == null || str == "" || str == " "){
+    return true;
+  }
+
+  return false;
 }
 /**
- *	ÄÚÈİÒ³·µ»Ø°´Å¥
- * ·µ»ØÖµ¡¡£ºNULL
- * ‚ä¿¼    £ºµ±Ç°ÁĞ±íµÚ¼¸Ò³£¬¾Í·µ»ØµÚ¼¸Ò³¡£
+ *	å†…å®¹é¡µè¿”å›æŒ‰é’®
+ * è¿”å›å€¼ã€€ï¼šNULL
+ * å‚™è€ƒ    ï¼šå½“å‰åˆ—è¡¨ç¬¬å‡ é¡µï¼Œå°±è¿”å›ç¬¬å‡ é¡µã€‚
  */
 function backx(argUrl){
-	// 
-	var actionNm = argUrl + "?param=back"
-	// ¹²Í¨´¦Àí
-		commonBack(actionNm);
+  //
+  var actionNm = argUrl + "?param=back"
+  // å…±é€šå¤„ç†
+  commonBack(actionNm);
 }
 function backx1(argUrl,args){
-	// ¾ßÌåµØÖ·
-	var actionNm = argUrl + "?param=back&"+args
-	// ¹²Í¨´¦Àí
-		commonBack(actionNm);
+  // å…·ä½“åœ°å€
+  var actionNm = argUrl + "?param=back&"+args
+  // å…±é€šå¤„ç†
+  commonBack(actionNm);
 }
 function backx2(argUrl,args){
-	// ¹²Í¨´¦Àí
-		commonBack(argUrl);
+  // å…±é€šå¤„ç†
+  commonBack(argUrl);
 }
 
 /**
- * POP¿ò´¦Àí
+ * POPæ¡†å¤„ç†
  */
 function commonPickup(url,info,features) {
-	var sFeatures ="dialogWidth=840px;dialogHeight=680px;resizable=no;scroll=no;status=no;center=yes;help=no;scroll=yes";
-	var aInfo  = new Array(1);
-	if (features != null) {
-		sFeatures = features;
-	}
-	if (info != null) {
-		aInfo = info;
-	}
-	var returnValue = window.showModalDialog(url+"&random="+Math.random(),window,sFeatures); 
-	return returnValue;
-} 
+  var sFeatures ="dialogWidth=840px;dialogHeight=680px;resizable=no;scroll=no;status=no;center=yes;help=no;scroll=yes";
+  var aInfo  = new Array(1);
+  if (features != null) {
+    sFeatures = features;
+  }
+  if (info != null) {
+    aInfo = info;
+  }
+  var returnValue = window.showModalDialog(url+"&random="+Math.random(),window,sFeatures);
+  return returnValue;
+}
 
 function commonPickupOpen(url) {
-	var sFeatures ="top=100,left=200,width=950,height=680,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no ";
-	
-	var myWindow =  window.open(url+"&random="+Math.random(),"_blank",sFeatures); 
-	myWindow.focus();
-} 
+  var sFeatures ="top=100,left=200,width=950,height=680,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no ";
 
-	function openSpecfiyWindown(url, data, name)  
-	       {  
-	           var tempForm = document.createElement("form");  
-	           tempForm.id="tempForm1";  
-	           tempForm.method="post";  
-	           tempForm.action=url;  
-	           tempForm.target=name;  
-	           var hideInput = document.createElement("input");  
-	          hideInput.type="hidden";  
-	          hideInput.name= "content"
-	          hideInput.value= data;
-	          tempForm.appendChild(hideInput);   
-	           try{
-	         	 tempForm.attachEvent("onsubmit",function(){ openWindow(name); });
-	           }catch(e){
-					tempForm.addEventListener("onsubmit", openWindow(name),false);
-				}
-	          document.body.appendChild(tempForm);  
-	          try {
-	          tempForm.fireEvent("onsubmit");
-	          } catch(e){};
-	          tempForm.submit();
-	          document.body.removeChild(tempForm);
-	     }
-	     
-	      function openWindow(name)  
-	      {  
-	      	var sFeatures ="top=100,left=200,width=950,height=680,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no ";
-	          window.open('about:blank',name,sFeatures);   
-	      }  
-	function setWinOpenValue(val) {
-		
-		var name = "";
-		try {
-			name = po("name").value;
-		}catch(e){
-			name = po("comm_name").value;
-		}
-		document.title = name + val;
-		var str = name + val;
-		try {
-			oo("searchDIV1").innerHTML = str;
-		}catch(e){}
-		oo("tname").innerHTML = str;
-		try {
-		oo("comm_name").value = name;
-		}catch(e){}
-		var lid = "";
-		try {
-			lid = po("lid").value;
-		}catch(e){
-			try {
-			lid = po("comm_id").value;
-			}catch(e){}
-		} 
-		try {
-		oo("comm_id").value = lid;
-		}catch(e){
-		}
+  var myWindow =  window.open(url+"&random="+Math.random(),"_blank",sFeatures);
+  myWindow.focus();
+}
+
+function openSpecfiyWindown(url, data, name)
+{
+  var tempForm = document.createElement("form");
+  tempForm.id="tempForm1";
+  tempForm.method="post";
+  tempForm.action=url;
+  tempForm.target=name;
+  var hideInput = document.createElement("input");
+  hideInput.type="hidden";
+  hideInput.name= "content"
+  hideInput.value= data;
+  tempForm.appendChild(hideInput);
+  try{
+    tempForm.attachEvent("onsubmit",function(){ openWindow(name); });
+  }catch(e){
+    tempForm.addEventListener("onsubmit", openWindow(name),false);
+  }
+  document.body.appendChild(tempForm);
+  try {
+    tempForm.fireEvent("onsubmit");
+  } catch(e){};
+  tempForm.submit();
+  document.body.removeChild(tempForm);
+}
+
+function openWindow(name)
+{
+  var sFeatures ="top=100,left=200,width=950,height=680,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no ";
+  window.open('about:blank',name,sFeatures);
+}
+function setWinOpenValue(val) {
+
+  var name = "";
+  try {
+    name = po("name").value;
+  }catch(e){
+    name = po("comm_name").value;
+  }
+  document.title = name + val;
+  var str = name + val;
+  try {
+    oo("searchDIV1").innerHTML = str;
+  }catch(e){}
+  oo("tname").innerHTML = str;
+  try {
+    oo("comm_name").value = name;
+  }catch(e){}
+  var lid = "";
+  try {
+    lid = po("lid").value;
+  }catch(e){
+    try {
+      lid = po("comm_id").value;
+    }catch(e){}
+  }
+  try {
+    oo("comm_id").value = lid;
+  }catch(e){
+  }
 }
 function comPickup(url,info,features) {
-	var sFeatures ="dialogWidth=680px;dialogHeight=300px;resizable=no;scroll=no;status=no;center=yes;help=no;scroll=yes;";
-	var aInfo  = new Array(1);
-	if (features != null) {
-		sFeatures = features;
-	}
-	if (info != null) {
-		aInfo = info;
-	}
-	//object.name = document.getElementById("communtity").value;
-	var returnValue = window.showModelessDialog(url,aInfo,sFeatures); 
-	return returnValue;
+  var sFeatures ="dialogWidth=680px;dialogHeight=300px;resizable=no;scroll=no;status=no;center=yes;help=no;scroll=yes;";
+  var aInfo  = new Array(1);
+  if (features != null) {
+    sFeatures = features;
+  }
+  if (info != null) {
+    aInfo = info;
+  }
+  //object.name = document.getElementById("communtity").value;
+  var returnValue = window.showModelessDialog(url,aInfo,sFeatures);
+  return returnValue;
 }
 
 /**
- * ¹²Í¨JSĞÂ¹æ·½·¨
- * actionNm  Ìá½»µÄurl
+ * å…±é€šJSæ–°è§„æ–¹æ³•
+ * actionNm  æäº¤çš„url
  */
 function commonInsert(actionNm){
-	
- 	objForm = document.forms[0];
- 	//Ä¿±êURLÉèÖÃ
-	objForm.action = actionNm;
-	objForm.method = "post";
 
-	//±íµ¥µİ½»
-	objForm.submit();
+  objForm = document.forms[0];
+  //ç›®æ ‡URLè®¾ç½®
+  objForm.action = actionNm;
+  objForm.method = "post";
+
+  //è¡¨å•é€’äº¤
+  objForm.submit();
 }
 
 /**
- *	¹²Í¨JS¸üĞÂ,É¾³ı·½·¨
- * ·µ»ØÖµ¡¡£ºNULL
- * ‚ä¿¼    £º¡£
+ *	å…±é€šJSæ›´æ–°,åˆ é™¤æ–¹æ³•
+ * è¿”å›å€¼ã€€ï¼šNULL
+ * å‚™è€ƒ    ï¼šã€‚
  */
 function toExecute(argUrl){
- 	objForm = document.forms[0];
- 	//Ä¿±êURLÉèÖÃ
-	objForm.action = argUrl;
-	objForm.method = "post";
-	//alert(argUrl)
-	//±íµ¥µİ½»
-	objForm.submit();
+  objForm = document.forms[0];
+  //ç›®æ ‡URLè®¾ç½®
+  objForm.action = argUrl;
+  objForm.method = "post";
+  //alert(argUrl)
+  //è¡¨å•é€’äº¤
+  objForm.submit();
 }
 function toExecute1(argUrl){
- 	objForm = document.forms[1];
- 	//Ä¿±êURLÉèÖÃ
-	objForm.action = argUrl;
-	objForm.method = "post";
-	//alert(argUrl)
-	//±íµ¥µİ½»
-	objForm.submit();
+  objForm = document.forms[1];
+  //ç›®æ ‡URLè®¾ç½®
+  objForm.action = argUrl;
+  objForm.method = "post";
+  //alert(argUrl)
+  //è¡¨å•é€’äº¤
+  objForm.submit();
 }
 /**
- *	¹²Í¨ÅÅĞò
- * ·µ»ØÖµ¡¡£ºNULL
- * ‚ä¿¼    £º¡£
+ *	å…±é€šæ’åº
+ * è¿”å›å€¼ã€€ï¼šNULL
+ * å‚™è€ƒ    ï¼šã€‚
  */
 function commonSort(argUrl,argType,argFields) {
-	var objForm = document.forms[0];
-	objForm.action = argUrl;
-	objForm.method = "post";
-	objForm.cnd_sort_fields.value = argFields;
-	objForm.cnd_sort_type.value  = argType;
-	objForm.submit();
+  var objForm = document.forms[0];
+  objForm.action = argUrl;
+  objForm.method = "post";
+  objForm.cnd_sort_fields.value = argFields;
+  objForm.cnd_sort_type.value  = argType;
+  objForm.submit();
 }
 /**
- *	ÖØÖÃËÑËÑÌõ¼ş
- * ·µ»ØÖµ¡¡£ºNULL
- * ‚ä¿¼    £º¡£
+ *	é‡ç½®æœæœæ¡ä»¶
+ * è¿”å›å€¼ã€€ï¼šNULL
+ * å‚™è€ƒ    ï¼šã€‚
  */
 function resetCon(){
-	
-	if (document.forms[0].cnd_search_type != null) {
-		document.forms[0].cnd_search_type.value = "";
-				
-	}
-	if (document.forms[0].cnd_search_type1 != null) {
-		document.forms[0].cnd_search_type1.value = "";
-				
-	}
-	if (document.forms[0].cnd_search_type2 != null) {
-		document.forms[0].cnd_search_type2.value = "";
-	}
-	if (document.forms[0].cnd_search_type3 != null) {
-		document.forms[0].cnd_search_type3.value = "";
-	}	
-	if (document.forms[0].cnd_search_type5 != null) {
-		document.forms[0].cnd_search_type5.value = "";
-	}		
-	if (document.forms[0].cnd_sort_fields != null) {
-		document.forms[0].cnd_sort_fields.value = "";
-	}
-	if (document.forms[0].cnd_sort_type != null) {
-		document.forms[0].cnd_sort_type.value = "";
-	}	
-	if (document.forms[0].cnd_search_name != null) {
-		document.forms[0].cnd_search_name.value = "";
-	}	
-	if (document.forms[0].aid != null) {
-		document.forms[0].aid.value = "";
-	}
-	if (document.forms[0].communtity != null) {
-		document.forms[0].communtity.value = "";
-	}	
+
+  if (document.forms[0].cnd_search_type != null) {
+    document.forms[0].cnd_search_type.value = "";
+
+  }
+  if (document.forms[0].cnd_search_type1 != null) {
+    document.forms[0].cnd_search_type1.value = "";
+
+  }
+  if (document.forms[0].cnd_search_type2 != null) {
+    document.forms[0].cnd_search_type2.value = "";
+  }
+  if (document.forms[0].cnd_search_type3 != null) {
+    document.forms[0].cnd_search_type3.value = "";
+  }
+  if (document.forms[0].cnd_search_type5 != null) {
+    document.forms[0].cnd_search_type5.value = "";
+  }
+  if (document.forms[0].cnd_sort_fields != null) {
+    document.forms[0].cnd_sort_fields.value = "";
+  }
+  if (document.forms[0].cnd_sort_type != null) {
+    document.forms[0].cnd_sort_type.value = "";
+  }
+  if (document.forms[0].cnd_search_name != null) {
+    document.forms[0].cnd_search_name.value = "";
+  }
+  if (document.forms[0].aid != null) {
+    document.forms[0].aid.value = "";
+  }
+  if (document.forms[0].communtity != null) {
+    document.forms[0].communtity.value = "";
+  }
 }
 /**
- * ÏÂÀ­¿ò³õÆÚ»¯
- * argControl ¿Ø¼şÃû
+ * ä¸‹æ‹‰æ¡†åˆæœŸåŒ–
+ * argControl æ§ä»¶å
  */
 function selectInit(argControl) {
-	var objSelect = document.getElementById(argControl);
-	// ³õÆÚ»¯
-	objSelect.options.length = 0;
-    // Ä¬ÈÏÖµ
-	var varItem = new Option("--ÇëÑ¡Ôñ--"," ");
-	objSelect.options.add(varItem);
-	
+  var objSelect = document.getElementById(argControl);
+  // åˆæœŸåŒ–
+  objSelect.options.length = 0;
+  // é»˜è®¤å€¼
+  var varItem = new Option("--è¯·é€‰æ‹©--"," ");
+  objSelect.options.add(varItem);
+
 }
 
 /**
- *	Ö´ĞĞËÑË÷
- * ·µ»ØÖµ¡¡£ºNULL
- * ‚ä¿¼    £º¡£
+ *	æ‰§è¡Œæœç´¢
+ * è¿”å›å€¼ã€€ï¼šNULL
+ * å‚™è€ƒ    ï¼šã€‚
  */
 function subForm(argUrl){
-	if(event.keyCode == 13){
-	var objForm = document.forms[0];
-	objForm.action = argUrl;
-	objForm.method = "post";
-	objForm.submit();
-	}
+  if(event.keyCode == 13){
+    var objForm = document.forms[0];
+    objForm.action = argUrl;
+    objForm.method = "post";
+    objForm.submit();
+  }
 }
 
 /**
- *	Ö´ĞĞËÑË÷
- * ·µ»ØÖµ¡¡£ºNULL
- * ‚ä¿¼    £º¡£
+ *	æ‰§è¡Œæœç´¢
+ * è¿”å›å€¼ã€€ï¼šNULL
+ * å‚™è€ƒ    ï¼šã€‚
  */
 function queryCon(argUrl){
-	var objForm = document.forms[0];
-	objForm.action = argUrl;
-	objForm.method = "post";
-	objForm.submit();
+  var objForm = document.forms[0];
+  objForm.action = argUrl;
+  objForm.method = "post";
+  objForm.submit();
 }
 
 /**
- * ¹²Í¨JS¸üĞÂ·½·¨
- * actionNm  Ìá½»µÄurl
+ * å…±é€šJSæ›´æ–°æ–¹æ³•
+ * actionNm  æäº¤çš„url
  */
 function commonUpdate(actionNm){
 
-	objForm = document.forms[0];
-	//È·ÈÏÏûÏ¢
-	if (confirm(CMQ0001) == true) {
-		//Ä¿±êURLÉèÖÃ
-		objForm.action = actionNm;
-		objForm.method = "post";
+  objForm = document.forms[0];
+  //ç¡®è®¤æ¶ˆæ¯
+  if (confirm(CMQ0001) == true) {
+    //ç›®æ ‡URLè®¾ç½®
+    objForm.action = actionNm;
+    objForm.method = "post";
 
-		//±íµ¥µİ½»
-		objForm.submit();
-	}
+    //è¡¨å•é€’äº¤
+    objForm.submit();
+  }
 }
 
 /**
- * ¹²Í¨JSÉ¾³ı·½·¨
- * actionNm  Ìá½»µÄurl
+ * å…±é€šJSåˆ é™¤æ–¹æ³•
+ * actionNm  æäº¤çš„url
  */
 function commonDelete(actionNm){
 
-  	objForm = document.forms[0];
-  	//Ä¿±êURLÉèÖÃ
-	objForm.action = actionNm;
-	objForm.method = "post";
-			
-	//È·ÈÏÏûÏ¢
-	if (confirm(CMQ0002) == true) {
+  objForm = document.forms[0];
+  //ç›®æ ‡URLè®¾ç½®
+  objForm.action = actionNm;
+  objForm.method = "post";
 
-		//±íµ¥µİ½»
-		objForm.submit();
-	}	
+  //ç¡®è®¤æ¶ˆæ¯
+  if (confirm(CMQ0002) == true) {
+
+    //è¡¨å•é€’äº¤
+    objForm.submit();
+  }
 }
 
 /**
- * ¹²Í¨JS²éÑ¯·½·¨
- * actionNm  Ìá½»µÄurl
+ * å…±é€šJSæŸ¥è¯¢æ–¹æ³•
+ * actionNm  æäº¤çš„url
  */
 function commonSelect(argActionNm){
 
-  	objForm = document.forms[0];
-	//objForm.intCurrentPage.value = 0;
-	//objForm.pagerMethod.value = "";
-	//objForm.hidSearchName.value = oo("searchName").value;
-	//Ä¿±êURLÉèÖÃ
-	objForm.action = argActionNm;
-	objForm.method = "post";
+  objForm = document.forms[0];
+  //objForm.intCurrentPage.value = 0;
+  //objForm.pagerMethod.value = "";
+  //objForm.hidSearchName.value = oo("searchName").value;
+  //ç›®æ ‡URLè®¾ç½®
+  objForm.action = argActionNm;
+  objForm.method = "post";
 
-	//±íµ¥µİ½»
-	objForm.submit();
+  //è¡¨å•é€’äº¤
+  objForm.submit();
 }
 
 
@@ -930,173 +930,173 @@ oImage.attachEvent('onerror',doWithError);
 
 
 function checkImage(obj,argName){
-   oForm = obj;
-   oImage.src = oo(argName).value;            
+  oForm = obj;
+  oImage.src = oo(argName).value;
 }
 function getSize(){
-   var oImgSize = Math.floor(oImage.fileSize/1024);
-   document.body.appendChild(oImage);
-   if(oImgSize<200){
-      //if(window.confirm('ÄúÈ·¶¨ÉÏ´«´ËÍ¼Æ¬Âğ£¿')){
-        // oForm.submit();
-      //}else{
-       // oForm.reset();
-        //return;
+  var oImgSize = Math.floor(oImage.fileSize/1024);
+  document.body.appendChild(oImage);
+  if(oImgSize<200){
+    //if(window.confirm('æ‚¨ç¡®å®šä¸Šä¼ æ­¤å›¾ç‰‡å—ï¼Ÿ')){
+    // oForm.submit();
+    //}else{
+    // oForm.reset();
+    //return;
     //  }
-   }else{
-      window.alert('²»ÔÊĞíÉÏ´«´óÓÚ200KBµÄÍ¼Æ¬£¡');
-      oForm.reset();
-   }
-   var oIEVersion = window.navigator.appVersion;
-   if(oIEVersion.indexOf('MSIE 6.0')!=-1){ oImage.removeNode(true); } 
+  }else{
+    window.alert('ä¸å…è®¸ä¸Šä¼ å¤§äº200KBçš„å›¾ç‰‡ï¼');
+    oForm.reset();
+  }
+  var oIEVersion = window.navigator.appVersion;
+  if(oIEVersion.indexOf('MSIE 6.0')!=-1){ oImage.removeNode(true); }
 }
 function doWithError(){
-   window.alert('³öÏÖ´íÎó£¬ÇëÖØĞÂÑ¡ÔñÍ¼Æ¬£¡');
-   oForm.reset();
+  window.alert('å‡ºç°é”™è¯¯ï¼Œè¯·é‡æ–°é€‰æ‹©å›¾ç‰‡ï¼');
+  oForm.reset();
 }
 
 function checktext(text)
 {
-    allValid = true;
-    for (i = 0;  i < text.length;  i++)
+  allValid = true;
+  for (i = 0;  i < text.length;  i++)
+  {
+    if (text.charAt(i) != " ")
     {
-      if (text.charAt(i) != " ")
-      {
-        allValid = false;
-        break;
-      }
+      allValid = false;
+      break;
     }
-return allValid;
+  }
+  return allValid;
 }
 function gbcount(message,total,used,remain)
 {
   var max;
   max = total.value;
   if (message.value.length > max) {
-  message.value = message.value.substring(0,max);
-  used.value = max;
-  remain.value = 0;
-  alert("¶ÌĞÅÄÚÈİ²»ÄÜ³¬¹ı"+total.value+"¸ö×Ö!");
+    message.value = message.value.substring(0,max);
+    used.value = max;
+    remain.value = 0;
+    alert("çŸ­ä¿¡å†…å®¹ä¸èƒ½è¶…è¿‡"+total.value+"ä¸ªå­—!");
   }
   else {
-  used.value = message.value.length;
-  remain.value = max - used.value;
-  if(used.value > 64) {
-  	oo("msgid").innerHTML="<font color=red>µ±Ç°ĞÅÏ¢ÄÚÈİĞèÒª·ÖÎªÁ½Ìõ·¢ËÍ£¬Çë¾¡Á¿ÓÃÒ»ÌõĞÅÏ¢½øĞĞÃèÊö£¡£¡£¡</font>";
-  
-  } else {
-  oo("msgid").innerHTML="";
-  }
+    used.value = message.value.length;
+    remain.value = max - used.value;
+    if(used.value > 64) {
+      oo("msgid").innerHTML="<font color=red>å½“å‰ä¿¡æ¯å†…å®¹éœ€è¦åˆ†ä¸ºä¸¤æ¡å‘é€ï¼Œè¯·å°½é‡ç”¨ä¸€æ¡ä¿¡æ¯è¿›è¡Œæè¿°ï¼ï¼ï¼</font>";
+
+    } else {
+      oo("msgid").innerHTML="";
+    }
   }
 }
-// »ñÈ¡¶ÔÏó
+// è·å–å¯¹è±¡
 function oo(objId) {
-	return document.getElementById(objId);
+  return document.getElementById(objId);
 }
-// »ñÈ¡¶ÔÏó
+// è·å–å¯¹è±¡
 function po(objId) {
-	return window.opener.document.getElementById(objId);
+  return window.opener.document.getElementById(objId);
 }
-// Í¼Æ¬ÕÒ²»µ½Ê±´¦Àí
+// å›¾ç‰‡æ‰¾ä¸åˆ°æ—¶å¤„ç†
 function imgError(argObj, argImg) {
-	try{
-	// Ä¬ÈÏÍ¼Æ¬ÉèÖÃ
-	argObj.src = argImg;
-	}catch(e){
-	}
+  try{
+    // é»˜è®¤å›¾ç‰‡è®¾ç½®
+    argObj.src = argImg;
+  }catch(e){
+  }
 }
-// ÕûÊı»òĞ¡Êı
+// æ•´æ•°æˆ–å°æ•°
 function IsFloat(val) {
-	var s = document.getElementById(val);
-	if (s.value != '' && (isNaN(s.value) || s.value < -1)) {
-		return false;
-	}
-	return true;
+  var s = document.getElementById(val);
+  if (s.value != '' && (isNaN(s.value) || s.value < -1)) {
+    return false;
+  }
+  return true;
 }
 
 function openwin(url) {
-    var a = document.createElement("a");
-    a.setAttribute("href", url);
-    a.setAttribute("target", "_blank");
-    a.setAttribute("id", "openwin");
-    document.body.appendChild(a);
-    a.click();
+  var a = document.createElement("a");
+  a.setAttribute("href", url);
+  a.setAttribute("target", "_blank");
+  a.setAttribute("id", "openwin");
+  document.body.appendChild(a);
+  a.click();
 }
-	function send(url,base,workUrl){
-		try{
-			var biaoji1 = document.getElementById("cnd_search_type1").value;
-			var aid1 = document.getElementById("aid").value;
-	   	}
-	   	catch(ex){}
-		$.ajax({
-			   type: "post",
-			   contentType:   "application/x-www-form-urlencoded",
-			   url: base+'/building.zzhz?param=createCSV',
-			   success: function(str){
-				   oo('time').value = str;
-					var frm = '<iframe id="bulkfrm" frameborder="0" style="width:100%; height:580px;_margin-top:20px;" allowtransparency="true" src="" name=""/>'
-						
-					BulkDlg = new Dialog({'content':frm,modal:true,width:600,height:550,center:true,drag:true,title:'aa',id:'editor-link'});
-					BulkDlg.show();
-				  	try{
-				   		document.getElementById('bulkfrm').src = base+'/building.zzhz?param=toShow&time='+str;
-				   	}
-				   	catch(ex){}
-					$.ajax({
-						   type: "post",
-						   contentType:   "application/x-www-form-urlencoded",
-						   url: url,
-						   data:{time:str,biaoji:encodeURIComponent(biaoji1),aid:aid1},
-						   success: function(str){
-							   if (str == 1) {
-								   cls(base,workUrl,biaoji1);
-							   }
-							}
-						  });
-			}
-		});
-	}
-	function send1(url,base){
-		try{
-			var biaoji1 = document.getElementById("cnd_search_type1").value;
-			var aid1 = document.getElementById("aid").value;
-	   	}
-	   	catch(ex){}
-		$.ajax({
-			   type: "post",
-			   contentType:   "application/x-www-form-urlencoded",
-			   url: base+'/building.zzhz?param=createCSV',
-			   success: function(str){
-				   oo('time').value = str;
-					var frm = '<iframe id="bulkfrm" frameborder="0" style="width:100%; height:580px;_margin-top:20px;" allowtransparency="true" src="" name=""/>'
-					BulkDlg = new Dialog({'content':frm,modal:true,width:600,height:550,center:true,drag:true,title:'aa',id:'editor-link'});
-					BulkDlg.show();
-				  	try{
-				   		document.getElementById('bulkfrm').src = base+'/building.zzhz?param=toShow&time='+str;
-				   	}
-				   	catch(ex){}
-				   	toExecute(url+'&time='+str);
-			}
-		});
-	}
-		// ²É¼¯Íê³É
-	function cls(base,workUrl,biaoji1){
-		try{
-		var time =  oo('time').value;
-		}   
-		catch(ex){}
-		$.ajax({
-			   type: "post",
-			   contentType:   "application/x-www-form-urlencoded",
-			   url: base+'/building.zzhz?param=delMessage',
-			   data:{time:time}
-			  });
-		try{
-			if (biaoji1 == "" || typeof biaoji1 == 'undefined' )
-			parent.close();
-		} 	catch(ex){}
-		if(workUrl != '')
-	   	    toExecute(base+'/'+workUrl);
-	   		BulkDlg.close(); 
-	   	
-	}
+function send(url,base,workUrl){
+  try{
+    var biaoji1 = document.getElementById("cnd_search_type1").value;
+    var aid1 = document.getElementById("aid").value;
+  }
+  catch(ex){}
+  $.ajax({
+    type: "post",
+    contentType:   "application/x-www-form-urlencoded",
+    url: base+'/building.zzhz?param=createCSV',
+    success: function(str){
+      oo('time').value = str;
+      var frm = '<iframe id="bulkfrm" frameborder="0" style="width:100%; height:580px;_margin-top:20px;" allowtransparency="true" src="" name=""/>'
+
+      BulkDlg = new Dialog({'content':frm,modal:true,width:600,height:550,center:true,drag:true,title:'aa',id:'editor-link'});
+      BulkDlg.show();
+      try{
+        document.getElementById('bulkfrm').src = base+'/building.zzhz?param=toShow&time='+str;
+      }
+      catch(ex){}
+      $.ajax({
+        type: "post",
+        contentType:   "application/x-www-form-urlencoded",
+        url: url,
+        data:{time:str,biaoji:encodeURIComponent(biaoji1),aid:aid1},
+        success: function(str){
+          if (str == 1) {
+            cls(base,workUrl,biaoji1);
+          }
+        }
+      });
+    }
+  });
+}
+function send1(url,base){
+  try{
+    var biaoji1 = document.getElementById("cnd_search_type1").value;
+    var aid1 = document.getElementById("aid").value;
+  }
+  catch(ex){}
+  $.ajax({
+    type: "post",
+    contentType:   "application/x-www-form-urlencoded",
+    url: base+'/building.zzhz?param=createCSV',
+    success: function(str){
+      oo('time').value = str;
+      var frm = '<iframe id="bulkfrm" frameborder="0" style="width:100%; height:580px;_margin-top:20px;" allowtransparency="true" src="" name=""/>'
+      BulkDlg = new Dialog({'content':frm,modal:true,width:600,height:550,center:true,drag:true,title:'aa',id:'editor-link'});
+      BulkDlg.show();
+      try{
+        document.getElementById('bulkfrm').src = base+'/building.zzhz?param=toShow&time='+str;
+      }
+      catch(ex){}
+      toExecute(url+'&time='+str);
+    }
+  });
+}
+// é‡‡é›†å®Œæˆ
+function cls(base,workUrl,biaoji1){
+  try{
+    var time =  oo('time').value;
+  }
+  catch(ex){}
+  $.ajax({
+    type: "post",
+    contentType:   "application/x-www-form-urlencoded",
+    url: base+'/building.zzhz?param=delMessage',
+    data:{time:time}
+  });
+  try{
+    if (biaoji1 == "" || typeof biaoji1 == 'undefined' )
+      parent.close();
+  } 	catch(ex){}
+  if(workUrl != '')
+    toExecute(base+'/'+workUrl);
+  BulkDlg.close();
+
+}
