@@ -1,0 +1,28 @@
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+/* ---------列表样式-------- */
+td{font-size:12px;}
+.STYLE11 {font-size: 12px;text-align:center;BACKGROUND-COLOR: #ffffff;height:20px}
+.STYLE21 {font-size: 12px;}
+.STYLE31 {font-size: 12px; font-weight: bold;text-align:center;background-image:url('bg.gif'); height:22px }
+.STYLE41 {
+	color: #03515d;
+	font-size: 12px;
+}
+
+/* ---------防止表格溢出-------- */
+#datatable{table-layout:fixed;}
+#datatable td,#datatable td div,#datatable td a{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;-o-text-overflow:ellipsis;}
+
+
+.menubackg {
+	BORDER-RIGHT: #98b1c0 1px solid; BORDER-TOP: #98b1c0 1px solid; FONT-SIZE: 12px; MARGIN-BOTTOM:0px; PADDING-BOTTOM: 1px; BORDER-LEFT: #98b1c0 1px solid; BORDER-BOTTOM: #98b1c0 1px solid; HEIGHT: 20px; TEXT-ALIGN: center
+}
+
+/**button*/
+.buttonSave{width:60px; height:20px; background:url(../save.gif) no-repeat; BORDER: #98b1c0 1px solid;MARGIN-TOP:2px;}

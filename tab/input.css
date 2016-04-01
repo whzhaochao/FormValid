@@ -1,0 +1,52 @@
+
+form{
+margin: 0px auto;
+}
+
+.bo{
+border-bottom: solid 1px #CCCCCC;
+}
+
+label{
+float: left;
+padding: 10px 0px 4px 30px;
+}
+
+input{
+padding: 0px;
+}
+
+input,textarea{
+border: 1px solid #CCCCCC;
+margin: 5px 0px;
+}
+
+textarea{
+padding: 2px;
+}
+
+.bt{
+width: 38px;
+height: 20px;
+font-size: 11px;
+border: solid 1px #CCCCCC;
+background: #FBFBFB;
+text-align: center;
+}
+
+.btcenter{
+text-align: center;
+clear: left;
+padding: 4px 0px 0px;
+}
+
+.sffocus {
+background: #F0F9FB; /*----for IE----*/
+border: 1px solid #1D95C7;
+}
+
+textarea:focus, input:focus {
+background: #F0F9FB; /*----for firefox......----*/
+border: 1px solid #1D95C7;
+}
+ 

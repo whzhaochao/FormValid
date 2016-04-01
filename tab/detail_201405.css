@@ -1,0 +1,174 @@
+@charset "gb2312";
+/*base*/
+body{background-color:#f5f5f5!important; }
+a{ color:#333;text-decoration:none; }
+a:hover{ color:#f33; text-decoration:underline; }
+.w298 { width:298px; }
+.w308 { width:308px; }
+.w638 { width:638px; }
+.w650 { width:650px; }
+.w958 { width:958px; }
+.h405 { height:405px; }
+.mauto_960 { width:960px; margin:0 auto; }
+.main_1000{background:#fff;}
+.clear10{clear:both; height:10px; font-size:0px; visibility:hidden; line-height:0px;}
+
+/****************************************************************** 弹出层 *************************************************************************/
+.fnzoushi{display:none;width:300px; height:225px;border:solid 1px #ebebeb;box-shadow: 2px 2px 8px #888888; background-color:#fff; position:absolute; top:30px;right:-113px;}
+
+.w100{width:100px;}
+.w152{width:152px;}
+.lookf .lookf_nr .look_inf .u_a li .inp01{ width:110px; height:27px; border:solid 1px #dcdcdc; color:#333; line-height:27px; padding-left:5px; margin-left:5px; color:#333;}
+
+.lookf .lookf_nr .choose{margin-top:10px;}
+.inp02{width:117px;height:32px; background-color:#f88123; text-align:center; line-height:32px; border:none; color:#fff; display:block;} 
+
+.inp02:hover,.inp03:hover{background-color:#f60;}
+
+.computer .computer_nr ul li{float:left; clear:none;font-size:12px; font-family:"宋体"; margin-top:10px;}
+.selest{width:175px; height:28px;line-height:28px; text-indent:2px; color:#666;}
+
+
+/* 楼栋信息 */
+.banInform{ clear:both;overflow:hidden;padding:5px;width:948px;border:0 none!important; }
+.banInform .lftflash{ float:left;overflow:hidden;width:695px;height:395px;border:1px solid #aed3e9;position:relative; }
+.bubble, .bubbleText, .bubble .lft, .bubble .cent, .bubble .rit, .bubble .arrow{background:url(pp.png) no-repeat;_background:url(pp.gif) no-repeat;}
+.bubble{position:absolute;height:40px;display:inline-block;min-width:34px;z-index:9; background-repeat:no-repeat;}
+.bubble .mainbox{height:33px;line-height:33px;background-position:0 0; display: inline-block;padding-left:7px;cursor:pointer; background-repeat:no-repeat;z-index:9;clear:both;overflow:hidden; background-repeat:no-repeat;}
+.bubble .lft{float:left;height:33px;padding-right:8px;text-align:center;background-position:right -50px;display: inline-block;background-repeat:no-repeat;z-index:9; background-repeat:no-repeat;} 
+.bubble .arrow{width:34px;height:17px;float:left;margin:-10px auto 0;*margin:-3px auto 0;background-position:-130px -100px;background-repeat:no-repeat;z-index:999;}
+.bubbleText{position:absolute;background-position:0 -120px;text-align:left;width:115px;height:108px;padding:10px;line-height:22px;z-index:999;}
+.bubbleText p{height:22px;width:115px;overflow:hidden;line-height:22px;}
+.bubbleText p a{ color:#049;text-decoration:underline;}
+.bubbleText p a:link, .bubbleText p a:visited{color:#049;text-decoration:underline;}
+.bubbleText p a:hover, .bubbleText p a:active{color:#f00;text-decoration:underline;}
+.banInform .ritbox{ float:left;margin-left:5px;width:245px; }
+.banInform .ritbox h2 { clear:both;overflow:hidden;height:30px;line-height:30px;font-weight:bold;text-align:center;font-size:12px; }
+.banInform .taonum{clear:both;overflow:hidden;height:60px;width:242px;}
+.banInform .taonum ul{ float:left;overflow:hidden;height:59px;width:241px;border-bottom:1px solid #aed3e9;text-align:center;border-right:1px solid #aed3e9;}
+.banInform .taonum li{ float:left;border-left:1px solid #aed3e9;overflow:hidden;height:29px;line-height:29px;border-top:1px solid #aed3e9;text-align:center;}
+.banInform .bantable{clear:both;overflow:hidden;width:240px;height:300px;margin-top:5px; padding-left:5px; border-left:1px solid #eee;}
+.banInform .bantable .bantt{width:240px;height:27px;line-height:27px;border-bottom:1px dashed #ccc;}
+.banInform .bantable .lfttt{float:left;margin-left:50px;}
+.banInform .bantable .rittt{float:right;width:50px;margin-right:5px;overflow:hidden;text-align:right;}
+.banInform .bantable .contbanbox{clear:both;overflow:hidden;width:234px;overflow:hidden;margin:3px;}
+.bantable .contbanbox .chuangtt{clear:both;overflow:hidden;width:232px;height:22px;border:1px solid #e1e1e1;line-height:22px;background:url(houseicon.gif) #f3f3f3 no-repeat 210px 6px;}
+.contbanbox .chuangtt img{ float:left;margin:6px; }
+.contbanbox .zktb{clear:both;overflow-x:hidden; overflow-y:auto;margin:5px 0;height:124px;}
+.contbanbox .zktb .title01{clear:both;overflow:hidden;height:26px;line-height:26px;text-align:center;background:url(botmline.gif) repeat-x bottom;width:232px;}
+.wid78{float:left;width:80px;}
+.wid76{float:left;width:57px;}
+.contbanbox .zktb .td01{clear:both;overflow:hidden;height:26px;line-height:26px;text-align:center;}
+
+.bantable .contbanbox .chuangtt{ clear: both;
+    overflow: hidden;
+    width: 232px;
+    height: 22px;
+    border: 1px solid rgb(225, 225, 225);
+    background: url("") no-repeat scroll 210px 6px rgb(243, 243, 243);
+    line-height: 22px;
+}
+
+/* 20130401 */
+.syld{position:relative;clear:both;width:236px;background:#fff;border:#197ac6 1px solid;padding:6px; float:left; }
+.syld h3{line-height:25px;margin:0;font-weight:bold;font-size:12px;color:#333;}
+.syldalone{ word-spacing:normal; white-space:normal; display:block; word-break:break-all; width:155px;line-height:23px;font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#333; background:url(http://img1.soufun.com/house/detail_php/images/pbgrp.gif) repeat 0 0; }
+.syld_fl { float:left; margin-top:3px; }
+.syld_fr { float:left; display:inline; width:155px; margin-left:10px; }
+.syldalone a,.syldalone a:visited{color:#3d6dcc;margin:0 5px;}
+.syldalone a:hover{color:#c00;margin:0 5px;}
+.syldarrow{position:absolute;width:12px;height:13px;background:url(mapsyldarrow.png) no-repeat;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://img1.soufun.com/house/detail_php/images/mapsyldarrow.png');top:-13px;left:20px;}
+.syld_close { position:absolute; top:10px; right:10px;}
+.maptck{width:360px;background:#fff;border:#197ac6 2px solid;padding:8px 10px 8px 15px;overflow:hidden;}
+.mttitle{height:22px;line-height:22px;padding:5px 0 8px;}
+.mttitle dt{float:left;font-weight:bold;font-size:14px;color:#049;}
+.mttitle dd{cursor:pointer;float:right;width:11px;height:10px;background:url(mapico.gif) no-repeat -29px -79px;border:none;margin:5px 10px 0 0;}
+.mttitle dd a{display:block;width:11px;height:10px;}
+.mtalone{width:360px;border-top:#ccc 1px dotted;font-size:12px;overflow:hidden;}
+.mtalone ul{float:left;width:170px;padding:0 5px;overflow:hidden;}
+.mtalone ul li{display:inline;float:left;line-height:29px;  overflow:hidden;}
+.mtaico{width:15px;height:15px;background:url(mapico.gif) no-repeat;margin:6px 5px 0 0; }
+.mtaico.kpsj{background-position:0 -31px;}
+.mtaico.jfsj{background-position:-25px -31px;}
+.mtaico.dy{background-position:0 -47px;}
+.mtaico.cs{background-position:-25px -47px;}
+.mtaico.hs{background-position:0 -63px;}
+.mtaico.thpb{background-position:-25px -63px;}
+.mtaico.hx{background-position:0 -79px;}
+.mtmr24{margin-right:24px;}
+.mthx{width:360px;border-top:#ccc 1px dotted;font-size:12px;overflow:hidden;}
+.mthx dt{float:left;width:85px;padding:0 0 0 5px;overflow:hidden;}
+.mthx dt .wtafl{float:left;line-height:30px;overflow:hidden;}
+.mthx dd{float:right;width:270px;overflow:hidden;}
+.mthx dd ul{ width:270px; }
+.mthx dd ul li{border-bottom:#ccc 1px dotted;}
+.mthx dd ul li span{ float:left;width:85px;padding-left:5px;overflow:hidden; height:30px; }
+.mthx dd ul li a { display:block; width:270px; line-height:29px;color:#049; overflow:hidden;cursor:pointer;}
+.mthx dd ul li a:hover{ background:#e8f4ff;}
+.mthx dd ul li a,.mthx dd ul li a:visited{text-decoration:none;}
+.mtnoinfor{height:30px;border-top:#ccc 1px dotted;padding:9px 0 10px;color:#666;}
+.mtnoinfor li{float:left;line-height:30px;}
+.mtniico{width:40px;height:30px;background:url(mapico.gif) no-repeat 0 0;margin-right:10px;}
+.mapcsbs,.maphsbs{height:40px;}
+.mapcsbs a span,.mapcsbs a:visited span{cursor:pointer;display:inline-block;float:left;height:28px;line-height:28px;background:url(mapbsobg.png) no-repeat left;
+*background:url(mapbsobg.png) no-repeat left!important;*background:url(mapbsbbg.gif) no-repeat left;padding:0 0 12px 10px;margin-left:-3px;color:#fff;}
+.mapcsbs a:hover span{height:28px;line-height:28px;background:url(mapbsobg.png) no-repeat left;*background:url(mapbsobg.png) no-repeat left!important;
+*background:url(mapbsobg.gif) no-repeat left;padding:0 0 12px 10px;margin-left:-3px;color:#fff;text-decoration:none!important;}
+.mapcsbs a,.mapcsbs a:visited{display:inline-block;float:left; padding-right:15px;height:40px;background:url(mapbsobg.png) no-repeat right;
+*background:url(mapbsobg.png) no-repeat right!important;*background:url(mapbsbbg.gif) no-repeat right; white-space:nowrap; text-decoration:none;}
+.mapcsbs a:hover{ padding-right:15px;height:40px;background:url(mapbsobg.png) no-repeat right;*background:url(mapbsobg.png) no-repeat right!important;
+*background:url(mapbsobg.gif) no-repeat right;text-decoration:none; }
+
+.maphsbs a span,.maphsbs a:visited span{cursor:pointer;display:inline-block;float:left;height:28px;line-height:28px;background:url(mapbsgbg.png) no-repeat left;
+*background:url(mapbsgbg.png) no-repeat left!important;*background:url(mapbsgbg.gif) no-repeat left;padding:0 0 12px 10px;margin-left:-3px;color:#fff;}
+.maphsbs a:hover span{height:28px;line-height:28px;background:url(mapbsgbg.png) no-repeat left;*background:url(mapbsgbg.png) no-repeat left!important;
+*background:url(mapbsgbg.gif) no-repeat left;padding:0 0 12px 10px;margin-left:-3px;color:#fff;text-decoration:none!important;}
+.maphsbs a,.maphsbs a:visited{display:inline-block;float:left;height:40px;background:url(mapbsgbg.png) no-repeat right; padding-right:15px;
+*background:url(mapbsgbg.png) no-repeat right!important;*background:url(mapbsgbg.gif) no-repeat right; text-decoration:none; white-space:nowrap;}
+.maphsbs a:hover{height:40px;background:url(mapbsgbg.png) no-repeat right;*background:url(mapbsgbg.png) no-repeat right!important;
+*background:url(mapbsgbg.gif) no-repeat right; padding-right:15px; text-decoration:none;}
+
+.maphscs a span,.maphscs a:visited span{cursor:pointer;display:inline-block;float:left;height:28px;line-height:28px;background:url(mapbsobg.png) no-repeat left;
+*background:url(mapbsobg.png) no-repeat left!important;*background:url(mapbsobg.gif) no-repeat left;padding:0 0 12px 10px;margin-left:-3px;color:#fff;}
+.maphscs a:hover span{height:28px;line-height:28px;background:url(mapbsobg.png) no-repeat left;*background:url(mapbsobg.png) no-repeat left!important;
+*background:url(mapbsobg.gif) no-repeat left;padding:0 0 12px 10px;margin-left:-3px;color:#fff;text-decoration:none!important;}
+.maphscs a,.maphscs a:visited{display:inline-block;float:left;height:40px;background:url(mapbsobg.png) no-repeat right;
+*background:url(mapbsobg.png) no-repeat right!important;*background:url(mapbsobg.gif) no-repeat right; padding-right:15px; text-decoration:none;}
+.maphscs a:hover {height:40px;background:url(mapbsobg.png) no-repeat right;*background:url(mapbsobg.png) no-repeat right!important;
+*background:url(mapbsobg.gif) no-repeat right; padding-right:15px; text-decoration:none;}
+/*最新楼盘高亮*/
+.mapys a span,.mapys a:visited span{cursor:pointer;display:inline-block;float:left;height:28px;line-height:28px;background:url(mapys.png) no-repeat left;
+*background:url(mapys.png) no-repeat left!important;*background:url(mapys.gif) no-repeat left;padding:0 0 12px 10px;margin-left:-3px;color:#fff;}
+.mapys a:hover span{height:28px;line-height:28px;background:url(mapbsobg.png) no-repeat left;*background:url(mapbsobg.png) no-repeat left!important;
+*background:url(mapbsobg.gif) no-repeat left;padding:0 0 12px 10px;margin-left:-3px;color:#fff;text-decoration:none!important;}
+.mapys a,.mapys a:visited{display:inline-block;float:left; padding-right:15px;height:40px;background:url(mapys.png) no-repeat right;
+*background:url(mapys.png) no-repeat right!important;*background:url(mapys.gif) no-repeat right; white-space:nowrap; text-decoration:none;}
+.mapys a:hover{ padding-right:15px;height:40px;background:url(mapbsobg.png) no-repeat right;*background:url(mapbsobg.png) no-repeat right!important;
+*background:url(mapbsobg.gif) no-repeat right;text-decoration:none; }
+/* 户型图 */
+.huxing_map { clear:both;overflow:hidden;width:958px; }
+.huxing_map li,.photo_album li { float:left;overflow:hidden;width:176px;height:168px;margin:5px 7px;display:inline; }
+.map_comment{ display:inline;float:left;width:174px;height:115px;border:#ccc 1px solid;overflow:hidden;position:relative; }
+.playlg { position:absolute; width:36px; height:36px; left:10px; bottom:10px; background:url(playlg.png) no-repeat 0 0;  _background:none;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=noscale, src="playlg.png"); }
+.qjkflg { position:absolute; width:88px; height:38px; left:10px; bottom:10px; background:url(qjkflg.png) no-repeat 0 0;  _background:none;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=noscale, src="qjkflg.png"); }
+.dh_c_alone_img { width:174px;height:115px;position:relative;display:table-cell;text-align:center;vertical-align:middle;overflow:hidden;cursor:pointer;}
+.dh_c_alone_img p{ position:static; +position:absolute;top:50%; }
+.dh_c_alone_img p img{ position:static;+position:relative;top:-49%;left:-50%;max-height:115px;overflow:hidden;cursor:pointer;width:174px;height:115px; }
+.huxing_txt { float:left;margin-top:4px;width:176px;overflow:hidden;height:40px;line-height:20px;text-align:center; }
+.huxing_cont { margin:10px 4px; clear:both; overflow:hidden; }
+
+
+
+
+.itr_box_con { position:relative; z-index:99; top:-8px; }
+.photo_album.pt_h200 li{ height:200px!important;}
+.photo_album.pt_h200 li .photo_album_txt { height:60px;}
+.pa_rt { position:absolute; right:0; top:0; } 
+.ptlist_tip_1,.ptlist_tip_2 { display:inline-block; height:19px; line-height:19px; padding:0 6px; color:#fff; -webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px; overflow:hidden; background:#f88123; }
+.ptlist_tip_2 { background:#60bd0a; }
+.ptlist_tip_1:hover {background:#f60; }
+.ptlist_tip_2:hover { background:#690 ;}
+.ptlist_tip_1 a,.ptlist_tip_1 a:hover,.ptlist_tip_2 a,.ptlist_tip_2 a:hover { color:#fff!important; text-decoration:none!important; }
+

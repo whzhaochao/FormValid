@@ -1,0 +1,38 @@
+
+.pn-ftable {
+	MARGIN-TOP: 5px; BACKGROUND-COLOR: #b4cfcf
+}
+.pn-flabel {
+	PADDING-RIGHT: 3px; BACKGROUND-COLOR: #f9fbfd; TEXT-ALIGN: right
+}
+.pn-flabel-h {
+	HEIGHT: 27px
+} 
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+td{font-size:12px;}
+.STYLE1 {font-size: 12px}
+.STYLE3 {font-size: 12px; font-weight: bold; }
+.STYLE4 {
+	color: #03515d;
+	font-size: 12px;
+}
+.tab_05{background: url(tab_05.gif)}
+.tab_12{background: url(tab_12.gif)}
+.tab_15{background: url(tab_15.gif)}
+.tab_19{background: url(tab_19.gif)}
+.tab_03{background: url(tab_03.gif)}
+.tab_07{background: url(tab_07.gif)}
+.tab_18{background: url(tab_18.gif)}
+
+.tab_20{background: url(tab_20.gif)}
+
+.tb{background: url(tb.gif) no-repeat}
+.add{background: url(add.gif) no-repeat}
+.edit{width:16px;height:16px;background: url(edit.gif) no-repeat}
+.delete{width:16px;height:16px;background: url(delete.gif) no-repeat}

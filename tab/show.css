@@ -1,0 +1,70 @@
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+/* ---------列表样式-------- */
+td{font-size:12px;}
+.STYLE1 {font-size: 12px;text-align:center;BACKGROUND-COLOR: #ffffff;height:20px}
+.STYLE11 {font-size: 12px;text-align:center;BACKGROUND-COLOR: #ffffff;}
+.STYLE5 {font-size: 12px;text-align:left;BACKGROUND-COLOR: #ffffff;height:20px;padding-left: 10px}
+.STYLE2 {font-size: 12px;}
+.STYLE3 {font-size: 12px; font-weight: bold;text-align:center;background-image:url('bg.gif'); height:22px }
+.STYLE4 {
+	color: #03515d;
+	font-size: 12px;
+}
+.tab_05{background: url(tab_05.gif)}
+.tab_12{background: url(tab_12.gif)}
+.tab_15{background: url(tab_15.gif)}
+.tab_19{background: url(tab_19.gif)}
+.tab_03{background: url(tab_03.gif)}
+.tab_07{background: url(tab_07.gif)}
+.tab_18{background: url(tab_18.gif)}
+
+.tab_20{background: url(tab_20.gif)}
+
+.tb{background: url(tb.gif) no-repeat}
+.add{background: url(add.gif) no-repeat}
+.edit{width:16px;height:16px;background: url(edit.gif) no-repeat}
+.delete{width:16px;height:16px;background: url(delete.gif) no-repeat}
+.showModel{width:16px;height:16px;background: url(zoom_in.gif) no-repeat}
+.showModel2{width:16px;height:16px;background: url(zoom_out.gif) no-repeat}
+
+/* ---------搜索样式-------- */
+.Search_tr{FONT-SIZE: 12px; LINE-HEIGHT: 22px; BACKGROUND-COLOR: #ffffff}
+.Search_gif{width:63px;height:63px;background: url(Search.gif) no-repeat;BACKGROUND-COLOR: #ffffff}
+
+/* ---------链接样式-------- */
+a:link {
+	color: #333333;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #333333;
+}
+a:hover {
+	text-decoration: none;
+	color: #FF6600;
+}
+a:active {
+	text-decoration: none;
+}
+
+/* ---------防止表格溢出-------- */
+#datatable{table-layout:fixed;}
+#datatable td,#datatable td div,#datatable td a{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;-o-text-overflow:ellipsis;}
+
+
+.menubackg {
+	BORDER-RIGHT: #98b1c0 1px solid; BORDER-TOP: #98b1c0 1px solid; FONT-SIZE: 12px; MARGIN-BOTTOM:0px; PADDING-BOTTOM: 1px; BORDER-LEFT: #98b1c0 1px solid; BORDER-BOTTOM: #98b1c0 1px solid; HEIGHT: 20px; TEXT-ALIGN: center
+}
+
+/**button*/
+.buttonSave{width:60px; height:20px; background:url(../save.gif) no-repeat; BORDER: #98b1c0 1px solid;MARGIN-TOP:2px;}
+
+.jdt { width:100px; height:19px;  background:url(1_13.png) repeat-x;}
+.jtt { width:100px; height:19px; background:url(1_13.png) 0 -30px; float:left;}
